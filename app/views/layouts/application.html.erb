@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav id="navbar">
+  <%= link_to "Todos", "/todos" %>
+  <%= link_to "New", "/todos/new"%>
+  </nav>
+    <%= yield %>
+    <footer>
+    <p> Footer </p>
+    </footer>
+  </body>
+</html>

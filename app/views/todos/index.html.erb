@@ -1,0 +1,12 @@
+
+<h1> Todo App </h1>
+<div id="todo-list">
+<%= @todo_items.each do |todo_item| %>
+<div class="todo-item">
+    <h1> <%= todo_item.title %></h1>
+    <h4> Category: <%= todo_item.category.name %></h4>
+    <h4> User: <%= todo_item.user.name %></h4>
+    <%= link_to "Show Todo", "/todos/#{todo_item.id}" %>
+</div>
+</div>
+<% end %>
